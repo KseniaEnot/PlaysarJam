@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BuffController : MonoBehaviour
 {
-    [SerializeField] float overloadTime;
     [Header("Fear Buff")]
     [SerializeField] float increasedSpeed;
     [SerializeField] float increasedRotationSpeed;
@@ -19,12 +18,13 @@ public class BuffController : MonoBehaviour
         playerMove = GetComponent<PlayerMove>();
         stateController.StateChanged += OnStateChange;
         stateController.EmotionOverloaded += OverloadEmotion;
+        stateController.EmotionOverloadEnded += OverloadEmotionEnded;
     }
 
 
     void OnStateChange(Emotions newEmotion)
     {
-        ResetEmotionBuff(currentEmotion);
+        ResetEmotionBuff();
         SetEmotionBuff(newEmotion);
         currentEmotion = newEmotion;
     }
@@ -33,19 +33,11 @@ public class BuffController : MonoBehaviour
     {
         SetEmotionDebuff(currentEmotion);
         //forbid to change emotions
-        StartCoroutine(WaitOverloadEnd());
     }
-
-    IEnumerator WaitOverloadEnd()
+    void OverloadEmotionEnded()
     {
-        float currentTime = 0f;
-        while (currentTime < overloadTime)
-        {
-            currentTime += Time.deltaTime;
-            yield return null;
-        }
-        ResetEmotionDebuff(currentEmotion);
-        SetEmotionDebuff(currentEmotion);
+        ResetEmotionDebuff();
+        SetEmotionBuff(currentEmotion);
     }
 
     void SetEmotionBuff(Emotions emo)
@@ -81,7 +73,7 @@ public class BuffController : MonoBehaviour
                 break;
         }
     }
-    void ResetEmotionBuff(Emotions emo) 
+    void ResetEmotionBuff() 
     {
 
         switch (currentEmotion)
@@ -97,7 +89,7 @@ public class BuffController : MonoBehaviour
                 break;
         }
     }
-    void ResetEmotionDebuff(Emotions emo)
+    void ResetEmotionDebuff()
     {
         switch (currentEmotion)
         {
@@ -105,7 +97,7 @@ public class BuffController : MonoBehaviour
                 //bring fog of war to default
                 break;
             case Emotions.Fear:
-                playerMove.SetInputType(GetComponent<KeyboardInput>());
+                playerMove.SetInputType(KeyboardInput.getInstance());
                 break;
             case Emotions.Sadness:
                 playerMove.ResetSpeed();

@@ -2620,8 +2620,6 @@ MonoBehaviour:
   FearUI: {fileID: 168800953}
   SadUI: {fileID: 1211587574}
   StateController: {fileID: 2017976294}
-  current: 0.05
-  others: 0.1
 --- !u!1 &1839106261
 GameObject:
   m_ObjectHideFlags: 0

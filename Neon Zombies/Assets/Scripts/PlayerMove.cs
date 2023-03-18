@@ -10,15 +10,17 @@ public class PlayerMove : MonoBehaviour
     public float rotationSpeed = 1f;
 
     private CharacterController controller;
+    private IInput inputController;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        inputController = GetComponent<KeyboardInput>();
     }
 
     private void FixedUpdate()
     {
-        var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxisRaw("Vertical"));
+        var input = inputController.GetInput();
         Vector3 move = new Vector3(0, 0, input.y);
         move.y -= gravity;
 
@@ -27,4 +29,6 @@ public class PlayerMove : MonoBehaviour
 
         transform.Rotate(Vector3.up, input.x);
     }
+
+    public void SetInputType(IInput input) => inputController = input;
 }

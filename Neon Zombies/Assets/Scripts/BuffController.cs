@@ -6,16 +6,19 @@ public class BuffController : MonoBehaviour
 {
     [Header("Fear Buff")]
     [SerializeField] float increasedSpeed;
-    [SerializeField] float increasedRotationSpeed;
+    [Header("Happiness Buff")]
+    [SerializeField] float fowIncreaseScale;
 
     private PlayerStateController stateController;
     private PlayerMove playerMove;
+    private FowParameters fow;
     private Emotions currentEmotion = Emotions.Happiness;
 
     private void Awake()
     {
         stateController = GetComponent<PlayerStateController>();
         playerMove = GetComponent<PlayerMove>();
+        fow = GetComponentInChildren<FowParameters>();
         stateController.StateChanged += OnStateChange;
         stateController.EmotionOverloaded += OverloadEmotion;
         stateController.EmotionOverloadEnded += OverloadEmotionEnded;
@@ -32,7 +35,6 @@ public class BuffController : MonoBehaviour
     void OverloadEmotion()
     {
         SetEmotionDebuff(currentEmotion);
-        //forbid to change emotions
     }
     void OverloadEmotionEnded()
     {
@@ -45,14 +47,13 @@ public class BuffController : MonoBehaviour
         switch (emo)
         {
             case Emotions.Happiness:
-                //increase fog of war
+                fow.IncreaseScale(fowIncreaseScale);
                 break;
             case Emotions.Fear:
                 playerMove.Speed = increasedSpeed;
-                playerMove.Rotation = increasedRotationSpeed;
                 break;
             case Emotions.Sadness:
-                //set some flaf to avoid traps to true
+                //flag is in script Trap for this
                 break;
         }
     }
@@ -61,7 +62,8 @@ public class BuffController : MonoBehaviour
         switch (emo)
         {
             case Emotions.Happiness:
-                //light up the screen
+                //change to lighting it up
+                fow.IncreaseScale(0);
                 break;
             case Emotions.Fear:
                 var newInput = GetComponent<RandomizeInput>();
@@ -79,13 +81,13 @@ public class BuffController : MonoBehaviour
         switch (currentEmotion)
         {
             case Emotions.Happiness:
-                //bring fog of war to default
+                fow.ResetScale();
                 break;
             case Emotions.Fear:
                 playerMove.ResetSpeed();
                 break;
             case Emotions.Sadness:
-                //set some flaf to avoid traps to false
+                //flag is in script Trap for this
                 break;
         }
     }
@@ -94,7 +96,7 @@ public class BuffController : MonoBehaviour
         switch (currentEmotion)
         {
             case Emotions.Happiness:
-                //bring fog of war to default
+                fow.ResetScale();
                 break;
             case Emotions.Fear:
                 playerMove.SetInputType(KeyboardInput.getInstance());

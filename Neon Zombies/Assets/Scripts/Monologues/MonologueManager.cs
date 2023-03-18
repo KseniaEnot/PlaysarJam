@@ -60,12 +60,13 @@ public class MonologueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
-        dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
+        dialogueText.text = sentence;
+        /*foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
-        }
+        }*/
+        yield return null;
         //yield return new WaitForSeconds(4);
         //DiaplayNextSentence();
     }

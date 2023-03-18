@@ -22,6 +22,9 @@ public class BuffController : MonoBehaviour
         stateController.StateChanged += OnStateChange;
         stateController.EmotionOverloaded += OverloadEmotion;
         stateController.EmotionOverloadEnded += OverloadEmotionEnded;
+
+        currentEmotion = Emotions.Happiness;
+        SetEmotionBuff(Emotions.Happiness);
     }
 
 

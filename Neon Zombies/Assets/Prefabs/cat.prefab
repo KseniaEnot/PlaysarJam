@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 8326046224436210954}
   - component: {fileID: 3660602491946415051}
   - component: {fileID: 2048230106129080406}
+  - component: {fileID: 3283690533900262238}
   m_Layer: 0
   m_Name: cat
   m_TagString: Untagged
@@ -558,6 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stateColdown: 2
+  _overloadColdown: 3
   IsStateChangeBlcoked: 0
   IsOverloaded: 0
   increase: 0.1
@@ -575,9 +577,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef543a9af4016a4894c5ecceadd1830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overloadTime: 0
   increasedSpeed: 3
   increasedRotationSpeed: 1
+--- !u!114 &3283690533900262238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496009982198311115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5f74c321387f441980c87396bb4570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: -3633983331887158548}
+  stateController: {fileID: 3660602491946415051}
 --- !u!1 &1511249258354967006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8233910797424610968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.367, z: 0}
+  m_LocalPosition: {x: 0, y: 0.69, z: 0}
   m_LocalScale: {x: 0.4739, y: 0.5789, z: 0.3646}
   m_ConstrainProportionsScale: 0
   m_Children: []

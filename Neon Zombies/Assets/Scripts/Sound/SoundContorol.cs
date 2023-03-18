@@ -9,7 +9,21 @@ public class SoundContorol : MonoBehaviour
     [SerializeField] Slider _musicSlider;
     [SerializeField] Slider _soudSlider;
     [SerializeField] AudioMixer _audioMixer;
-    private AudioSource hehe;
+
+    private void Start()
+    {
+        if(_musicSlider!=null && _soudSlider != null)
+        {
+            float music;
+            float sound;
+
+            if (_audioMixer.GetFloat("musicVol", out music))
+                _musicSlider.value = music;
+
+            if (_audioMixer.GetFloat("musicVol", out sound))
+                _musicSlider.value = sound;
+        }
+    }
 
     public void ChangeMusic()
     {

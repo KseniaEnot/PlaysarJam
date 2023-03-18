@@ -28,21 +28,21 @@ public class BarScale : MonoBehaviour
     {
         if (StateController.PlayerState == Emotions.Fear)
         {
-            HappyUI.fillAmount += others * Time.deltaTime;
-            FearUI.fillAmount -= current * Time.deltaTime;
-            SadUI.fillAmount += others * Time.deltaTime;
+            HappyUI.fillAmount -= others * Time.deltaTime;
+            FearUI.fillAmount += current * Time.deltaTime;
+            SadUI.fillAmount -= others * Time.deltaTime;
         }
         else if (StateController.PlayerState == Emotions.Happiness)
         {
-            HappyUI.fillAmount -= current * Time.deltaTime;
-            FearUI.fillAmount += others * Time.deltaTime;
-            SadUI.fillAmount += others * Time.deltaTime;
+            HappyUI.fillAmount += current * Time.deltaTime;
+            FearUI.fillAmount -= others * Time.deltaTime;
+            SadUI.fillAmount -= others * Time.deltaTime;
         }
         else if(StateController.PlayerState == Emotions.Sadness)
         {
-            HappyUI.fillAmount += others * Time.deltaTime;
-            FearUI.fillAmount += others * Time.deltaTime;
-            SadUI.fillAmount -= current * Time.deltaTime;
+            HappyUI.fillAmount -= others * Time.deltaTime;
+            FearUI.fillAmount -= others * Time.deltaTime;
+            SadUI.fillAmount += current * Time.deltaTime;
         }
     }
 }

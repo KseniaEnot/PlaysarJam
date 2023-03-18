@@ -14,6 +14,8 @@ public class Trap : MonoBehaviour
     private float _progressOneTapPower = 1f;
 
     private float _trapProgress = 0f;
+    private float _trapTimer = 0f;
+    private bool _isInTrap = false;
 
 
     private void Update()
@@ -30,6 +32,10 @@ public class Trap : MonoBehaviour
     }
 
     private void GetCaught(PlayerStateController stateController) {
+        stateController.IsStateChangeBlcoked = true;
+    }
+
+    private void StartTrapEvent(PlayerStateController stateController) {
         stateController.IsStateChangeBlcoked = true;
     }
 }

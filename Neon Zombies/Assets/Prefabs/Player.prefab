@@ -136,6 +136,7 @@ MonoBehaviour:
   gravity: 9.8
   playerSpeed: 1.5
   rotationSpeed: 0.5
+  isInTrap: 0
 --- !u!114 &3325049533517509473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stateColdown: 2
   IsStateChangeBlcoked: 0
+  IsOverloaded: 0
+  increase: 0.1
+  decrease: 0.05
+  overloadDecrease: 0.2
 --- !u!114 &5629406681586652527
 MonoBehaviour:
   m_ObjectHideFlags: 0

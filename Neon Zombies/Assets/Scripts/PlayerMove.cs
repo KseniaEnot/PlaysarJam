@@ -30,12 +30,12 @@ public class PlayerMove : MonoBehaviour
     {
         get
         {
-            return playerSpeed;
+            return rotationSpeed;
         }
 
         set
         {
-            playerSpeed = value;
+            rotationSpeed = value;
         }
     }
 

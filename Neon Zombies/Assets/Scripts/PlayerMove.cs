@@ -48,6 +48,7 @@ public class PlayerMove : MonoBehaviour
          controller.Move(move * Speed * Time.deltaTime);
 
          transform.Rotate(Vector3.up, input.x * Rotation);*/
+        Debug.Log("врн Я рнани МЕ рюй?");
         controller.Move(move * Speed * Time.deltaTime);
 
     }

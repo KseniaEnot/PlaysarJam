@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,10 @@ public class Trap : MonoBehaviour
 
     [SerializeField]
     private Image _progressBar;
+
+    [SerializeField]
+    private GameObject _text;
+    private int textScroller = -1;
 
     [SerializeField]
     private GameObject QTE;
@@ -77,7 +82,12 @@ public class Trap : MonoBehaviour
 
         ChangeProgress(1 - _trapProgress / _progressSize);
 
+        if (_text.GetComponent<TextMeshProUGUI>().fontSize>120)
+            textScroller = -1;
+        else if (_text.GetComponent<TextMeshProUGUI>().fontSize<70)
+            textScroller = 1;
 
+        _text.GetComponent<TextMeshProUGUI>().fontSize += textScroller;
         _trapTimer += Time.deltaTime;
         if (_trapTimer > _timeInTrap) GetOut();
     }

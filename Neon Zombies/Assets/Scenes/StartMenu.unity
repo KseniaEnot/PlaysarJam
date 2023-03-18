@@ -735,8 +735,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -870,8 +870,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1437,8 +1437,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192f325e73324d94e91091fd9afcc400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 2030398647}
-  SettingsField: {fileID: 337497292}
+  BackgroundUI: {fileID: 2030398647}
+  SettingsUI: {fileID: 337497292}
+  PauseUI: {fileID: 0}
+  PauseSettingsUI: {fileID: 0}
+  isPause: 0
+  timer: 1
 --- !u!1 &1558472242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,8 +1606,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1949,8 +1953,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0

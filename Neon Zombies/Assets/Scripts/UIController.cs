@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-    public GameObject background;
-    public GameObject SettingsField;
+    //переменные главного меню
+    public GameObject BackgroundUI;
+    public GameObject SettingsUI;
     bool settings = false;
+
+    //переменные меню паузы
+    public GameObject PauseUI;
+    public GameObject PauseSettingsUI;
+    bool pausesettings = false;
+    public bool isPause = false;
+    public float timer = 1;
+
+    //функции главного меню
     public void StartButton()
     {
         SceneManager.LoadScene(1);
@@ -15,21 +25,58 @@ public class UIController : MonoBehaviour
     public void Settings()
     {
         settings = true;
-        background.SetActive(false);
-        SettingsField.SetActive(true);
+        BackgroundUI.SetActive(false);
+        SettingsUI.SetActive(true);
        
     }
     public void Exit()
     {
         Application.Quit();
     }
+    //функции меню паузы
+    public void Continue()
+    {
+        PauseUI.SetActive(false);
+        Time.timeScale = 1;
+        timer = 1;
+    }
+    public void PauseSettings()
+    {
+        pausesettings = true;
+        PauseUI.SetActive(false);
+        PauseSettingsUI.SetActive(true);
+    }
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+ 
     public void Update()
     {
+        Time.timeScale = timer;
         if (Input.GetKeyDown(KeyCode.Escape) && settings == true)
         {
-            SettingsField.SetActive(false);
-            background.SetActive(true);
+            SettingsUI.SetActive(false);
+            BackgroundUI.SetActive(true);
             settings = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && pausesettings == true)
+        {
+            PauseSettingsUI.SetActive(false);
+            PauseUI.SetActive(true);
+            pausesettings = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPause == true)
+        {
+            PauseUI.SetActive(false);
+            timer = 1;
+            isPause = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPause == false)
+        {
+            PauseUI.SetActive(true);
+            timer = 0;
+            isPause = true;
         }
     }
 }

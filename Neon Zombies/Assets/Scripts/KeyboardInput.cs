@@ -7,6 +7,7 @@ public class KeyboardInput : MonoBehaviour, IInput
     public Vector2 GetInput()
     {
         return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
     }
+
+    public bool getEbuttonDown() => Input.GetKeyDown(KeyCode.E);
 }

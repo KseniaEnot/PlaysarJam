@@ -11,6 +11,8 @@ public class PlayerStateController : MonoBehaviour
     private float _stateColdownTimer = 0f;
     private bool _canChangeState = true;
 
+    public bool IsStateChangeBlcoked = false;
+
     public Emotions PlayerState
     {
         get
@@ -38,7 +40,7 @@ public class PlayerStateController : MonoBehaviour
 
     void ChangeStateOnInput()
     {
-        if (!_canChangeState) return;
+        if (!_canChangeState || IsStateChangeBlcoked) return;
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1) && PlayerState != Emotions.Happiness) { 

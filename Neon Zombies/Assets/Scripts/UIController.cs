@@ -24,9 +24,9 @@ public class UIController : MonoBehaviour
     }
     public void Settings()
     {
-        settings = true;
-        BackgroundUI.SetActive(false);
-        SettingsUI.SetActive(true);
+        settings = !settings;
+        BackgroundUI.SetActive(!settings);
+        SettingsUI.SetActive(settings);
        
     }
     public void Exit()

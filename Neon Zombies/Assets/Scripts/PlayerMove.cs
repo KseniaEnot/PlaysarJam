@@ -30,12 +30,12 @@ public class PlayerMove : MonoBehaviour
     {
         get
         {
-            return playerSpeed;
+            return rotationSpeed;
         }
 
         set
         {
-            playerSpeed = value;
+            rotationSpeed = value;
         }
     }
 
@@ -43,6 +43,8 @@ public class PlayerMove : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         inputController = KeyboardInput.getInstance();
+        initialPlayerSpeed = Speed;
+        initialRotationSpeed = Rotation;
     }
 
     private void FixedUpdate()

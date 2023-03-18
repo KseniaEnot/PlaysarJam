@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 9.8
   playerSpeed: 1.5
-  rotationSpeed: 0.1
+  rotationSpeed: 0.5
 --- !u!114 &3325049533517509473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,5 +175,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overloadTime: 0
-  increasedSpeed: 4
-  increasedRotationSpeed: 0.3
+  increasedSpeed: 3
+  increasedRotationSpeed: 1

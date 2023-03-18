@@ -42,7 +42,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
-        inputController = GetComponent<KeyboardInput>();
+        inputController = KeyboardInput.getInstance();
     }
 
     private void FixedUpdate()

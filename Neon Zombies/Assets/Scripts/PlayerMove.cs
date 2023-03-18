@@ -7,10 +7,8 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float gravity = 9.8f;
     [SerializeField] float playerSpeed = 1f;
-    [SerializeField] float rotationSpeed = 1f;
 
     private float initialPlayerSpeed;
-    private float initialRotationSpeed;
     private CharacterController controller;
     private IInput inputController;
 
@@ -28,25 +26,12 @@ public class PlayerMove : MonoBehaviour
             playerSpeed = value;
         }
     }
-    public float Rotation
-    {
-        get
-        {
-            return rotationSpeed;
-        }
-
-        set
-        {
-            rotationSpeed = value;
-        }
-    }
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         inputController = KeyboardInput.getInstance();
         initialPlayerSpeed = Speed;
-        initialRotationSpeed = Rotation;
     }
 
     private void FixedUpdate()
@@ -54,13 +39,17 @@ public class PlayerMove : MonoBehaviour
         if (isInTrap) return;
 
         var input = inputController.GetInput();
-        Vector3 move = new Vector3(0, 0, input.y);
+        Vector3 move = new Vector3(input.x, 0, input.y);
+        if (move != Vector3.zero)
+            transform.forward = move.normalized;
         move.y -= gravity;
 
-        move = this.transform.TransformDirection(move);
+        /* move = this.transform.TransformDirection(move);
+         controller.Move(move * Speed * Time.deltaTime);
+
+         transform.Rotate(Vector3.up, input.x * Rotation);*/
         controller.Move(move * Speed * Time.deltaTime);
 
-        transform.Rotate(Vector3.up, input.x * Rotation);
     }
 
     public void SetInputType(IInput input) => inputController = input;
@@ -68,6 +57,5 @@ public class PlayerMove : MonoBehaviour
     public void ResetSpeed()
     {
         Speed = initialPlayerSpeed;
-        Rotation = initialRotationSpeed;
     }
 }

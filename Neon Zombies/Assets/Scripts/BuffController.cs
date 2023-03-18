@@ -6,7 +6,6 @@ public class BuffController : MonoBehaviour
 {
     [Header("Fear Buff")]
     [SerializeField] float increasedSpeed;
-    [SerializeField] float increasedRotationSpeed;
     [Header("Happiness Buff")]
     [SerializeField] float fowIncreaseScale;
 
@@ -52,7 +51,6 @@ public class BuffController : MonoBehaviour
                 break;
             case Emotions.Fear:
                 playerMove.Speed = increasedSpeed;
-                playerMove.Rotation = increasedRotationSpeed;
                 break;
             case Emotions.Sadness:
                 //flag is in script Trap for this

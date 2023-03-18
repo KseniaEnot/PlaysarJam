@@ -13,8 +13,8 @@ public class BarScale : MonoBehaviour
     public Image FearUI;
     public Image SadUI;
     public PlayerStateController StateController;
-    public float current = 0.05f;
-    public float others = 0.1f;
+    public float current = 0.1f;
+    public float others = 0.05f;
     public void BarScaler() {
         float width = bar.GetComponent<RectTransform>().sizeDelta.x;
         float height = bar.GetComponent<RectTransform>().sizeDelta.y;

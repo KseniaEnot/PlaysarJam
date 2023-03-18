@@ -79,7 +79,7 @@ public class PlayerStateController : MonoBehaviour
 
     void ChangeStateOnInput()
     {
-        if (!_canChangeState || IsStateChangeBlcoked) return;
+        if (!_canChangeState || IsStateChangeBlcoked || IsOverloaded) return;
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1) && PlayerState != Emotions.Happiness) { 

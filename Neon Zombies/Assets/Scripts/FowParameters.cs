@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FowParameters : MonoBehaviour
 {
+    [SerializeField] float transitionTime = 0.1f;
     GameObject fow;
     Vector3 initialScale;
 
@@ -13,17 +14,17 @@ public class FowParameters : MonoBehaviour
         initialScale = fow.transform.localScale;
     }
 
-    public void ResetScale() => fow.transform.localScale = initialScale;
-    public void IncreaseScale(float scaleMultiplier) => fow.transform.localScale *= scaleMultiplier;
+    public void ResetScale() => StartCoroutine(ChangeScale(initialScale)); //fow.transform.localScale = initialScale;
+    public void IncreaseScale(float scaleMultiplier) => StartCoroutine(ChangeScale(scaleMultiplier* initialScale)); //fow.transform.localScale *= scaleMultiplier;
 
-    IEnumerator ChangeScale()
+    IEnumerator ChangeScale(Vector3 target)
     {
-        float currentTime;
-        float waitTime = 0.5f;
         float step = 0.005f;
-        for (int i = 0; i < waitTime; i++)
+        int iterations = (int)(transitionTime / step);
+        Vector3 diff = (target - fow.transform.localScale) / iterations;
+        for (int i = 0; i < iterations; i++)
         {
-
+            fow.transform.localScale += diff;
             yield return new WaitForSeconds(step);
         }
     }

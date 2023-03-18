@@ -135,7 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 9.8
   playerSpeed: 1.5
-  rotationSpeed: 0.5
   isInTrap: 0
 --- !u!114 &3325049533517509473
 MonoBehaviour:
@@ -182,8 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increasedSpeed: 3
-  increasedRotationSpeed: 1
-  fowIncreaseScale: 0
+  fowIncreaseScale: 2
 --- !u!1 &3425160079016545603
 GameObject:
   m_ObjectHideFlags: 0

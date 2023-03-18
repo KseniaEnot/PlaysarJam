@@ -18660,6 +18660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QTE
       objectReference: {fileID: 0}
+    - target: {fileID: 8554752423784816325, guid: 5b64f236717fed64db707966f64a124a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8554752423784816326, guid: 5b64f236717fed64db707966f64a124a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

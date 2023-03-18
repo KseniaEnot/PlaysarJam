@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class PlayerStateController : MonoBehaviour
             _playerState = value;
         }
     }
+
+    public event Action<Emotions> StateChanged;
 
     void Start()
     {
@@ -62,6 +65,8 @@ public class PlayerStateController : MonoBehaviour
             _canChangeState = false;
             _stateColdownTimer = 0f;
         }
+
+        if (!_canChangeState) StateChanged(PlayerState);
     }
 
     void UpdateTimer()

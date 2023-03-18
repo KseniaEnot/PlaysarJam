@@ -6,11 +6,38 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float gravity = 9.8f;
-    public float playerSpeed = 1f;
-    public float rotationSpeed = 1f;
+    [SerializeField] float playerSpeed = 1f;
+    [SerializeField] float rotationSpeed = 1f;
 
+    private float initialPlayerSpeed;
+    private float initialRotationSpeed;
     private CharacterController controller;
     private IInput inputController;
+
+    public float Speed
+    {
+        get
+        {
+            return playerSpeed;
+        }
+
+        set
+        {
+            playerSpeed = value;
+        }
+    }
+    public float Rotation
+    {
+        get
+        {
+            return playerSpeed;
+        }
+
+        set
+        {
+            playerSpeed = value;
+        }
+    }
 
     private void Awake()
     {
@@ -25,10 +52,16 @@ public class PlayerMove : MonoBehaviour
         move.y -= gravity;
 
         move = this.transform.TransformDirection(move);
-        controller.Move(move * playerSpeed * Time.deltaTime);
+        controller.Move(move * Speed * Time.deltaTime);
 
-        transform.Rotate(Vector3.up, input.x);
+        transform.Rotate(Vector3.up, input.x * Rotation);
     }
 
     public void SetInputType(IInput input) => inputController = input;
+
+    public void ResetSpeed()
+    {
+        Speed = initialPlayerSpeed;
+        Rotation = initialRotationSpeed;
+    }
 }

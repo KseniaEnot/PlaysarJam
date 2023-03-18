@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStateController : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject[] EmotionImage = new GameObject[3];
     [SerializeField]
     private float _stateColdown = 2f;
     [SerializeField]
@@ -79,11 +82,20 @@ public class PlayerStateController : MonoBehaviour
 
     void ChangeStateOnInput()
     {
+        Image image;
+        Color tempColor;
         if (!_canChangeState || IsStateChangeBlcoked || IsOverloaded) return;
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1) && PlayerState != Emotions.Happiness) { 
             PlayerState = Emotions.Happiness;
+            EmotionImage[0].SetActive(false);
+            EmotionImage[1].SetActive(true);
+            EmotionImage[2].SetActive(false);
+            image = EmotionImage[1].GetComponent<Image>();
+            tempColor = image.color;
+            tempColor.a = 1f;
+            image.color = tempColor;
             _canChangeState = false;
             _stateColdownTimer = 0f;
         }
@@ -91,6 +103,13 @@ public class PlayerStateController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2) && PlayerState != Emotions.Fear)
         {
             PlayerState = Emotions.Fear;
+            EmotionImage[0].SetActive(true);
+            image = EmotionImage[0].GetComponent<Image>();
+            tempColor = image.color;
+            tempColor.a = 1f;
+            image.color = tempColor;
+            EmotionImage[1].SetActive(false);
+            EmotionImage[2].SetActive(false);
             _canChangeState = false;
             _stateColdownTimer = 0f;
         }
@@ -98,6 +117,13 @@ public class PlayerStateController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3) && PlayerState != Emotions.Sadness)
         {
             PlayerState = Emotions.Sadness;
+            EmotionImage[0].SetActive(false);
+            EmotionImage[1].SetActive(false);
+            EmotionImage[2].SetActive(true);
+            image = EmotionImage[2].GetComponent<Image>();
+            tempColor = image.color;
+            tempColor.a = 1f;
+            image.color = tempColor;
             _canChangeState = false;
             _stateColdownTimer = 0f;
         }
@@ -107,11 +133,56 @@ public class PlayerStateController : MonoBehaviour
 
     void UpdateTimer()
     {
+        Image image;
+        Color tempColor;
         if (_canChangeState) return;
 
         _stateColdownTimer += Time.deltaTime;
 
-        if (_stateColdownTimer > _stateColdown) _canChangeState = true;
+        if (_stateColdownTimer > _stateColdown) {
+            switch (PlayerState)
+            {
+                case Emotions.Fear:
+                    EmotionImage[1].SetActive(true);
+                    EmotionImage[2].SetActive(true);
+                    image = EmotionImage[1].GetComponent<Image>();
+                    tempColor = image.color;
+                    tempColor.a = 0.5f;
+                    image.color = tempColor;
+                    image = EmotionImage[2].GetComponent<Image>();
+                    tempColor = image.color;
+                    tempColor.a = 0.5f;
+                    image.color = tempColor;
+                    break;
+                case Emotions.Happiness:
+                    EmotionImage[0].SetActive(true);
+                    EmotionImage[2].SetActive(true);
+                    image = EmotionImage[0].GetComponent<Image>();
+                    tempColor = image.color;
+                    tempColor.a = 0.5f;
+                    image.color = tempColor;
+                    image = EmotionImage[2].GetComponent<Image>();
+                    tempColor = image.color;
+                    tempColor.a = 0.5f;
+                    image.color = tempColor;
+                    break;
+                case Emotions.Sadness:
+                    EmotionImage[0].SetActive(true);
+                    EmotionImage[1].SetActive(true);
+                    image = EmotionImage[1].GetComponent<Image>();
+                    tempColor = image.color;
+                    tempColor.a = 0.5f;
+                    image.color = tempColor;
+                    image = EmotionImage[0].GetComponent<Image>();
+                    tempColor = image.color;
+                    tempColor.a = 0.5f;
+                    image.color = tempColor;
+                    break;
+                default:
+                    break;
+            }
+            _canChangeState = true;
+        }
     }
 
     private void UpdateOverloadTimer()

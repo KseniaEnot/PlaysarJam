@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,10 @@ public class BarScale : MonoBehaviour
     public Image FearUI;
     public Image SadUI;
     public PlayerStateController StateController;
-    public float current = 0.1f;
-    public float others = 0.05f;
+    //public float current = 0.1f;
+    //public float others = 0.05f;
+    //public float overloadDecrease = 0.2f;
+
     public void BarScaler() {
         float width = bar.GetComponent<RectTransform>().sizeDelta.x;
         float height = bar.GetComponent<RectTransform>().sizeDelta.y;
@@ -24,9 +27,13 @@ public class BarScale : MonoBehaviour
         barback.GetComponent<RectTransform>().sizeDelta = new Vector2(x, y);
 
     }
-    public void Update()
+    public void LateUpdate()
     {
-        if (StateController.PlayerState == Emotions.Fear)
+        HappyUI.fillAmount = StateController.EmotionFill(Emotions.Happiness);
+        FearUI.fillAmount = StateController.EmotionFill(Emotions.Fear);
+        SadUI.fillAmount = StateController.EmotionFill(Emotions.Sadness);
+
+        /*if (StateController.PlayerState == Emotions.Fear)
         {
             HappyUI.fillAmount -= others * Time.deltaTime;
             FearUI.fillAmount += current * Time.deltaTime;
@@ -43,7 +50,7 @@ public class BarScale : MonoBehaviour
             HappyUI.fillAmount -= others * Time.deltaTime;
             FearUI.fillAmount -= others * Time.deltaTime;
             SadUI.fillAmount += current * Time.deltaTime;
-        }
+        }*/
     }
 }
 

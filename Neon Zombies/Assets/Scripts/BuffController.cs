@@ -18,6 +18,7 @@ public class BuffController : MonoBehaviour
         stateController = GetComponent<PlayerStateController>();
         playerMove = GetComponent<PlayerMove>();
         stateController.StateChanged += OnStateChange;
+        stateController.EmotionOverloaded += OverloadEmotion;
     }
 
 

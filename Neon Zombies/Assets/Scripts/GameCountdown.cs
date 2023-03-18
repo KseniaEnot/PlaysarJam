@@ -9,8 +9,9 @@ public class GameCountdown : MonoBehaviour
     [SerializeField] float overallTimeSeconds = 180f;
     [SerializeField] Image fill;
     [SerializeField] TextMeshProUGUI text;
+    [SerializeField] GameObject endPanel;
 
-    public float currentTimer = 0f;
+    [HideInInspector] public float currentTimer = 0f;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class GameCountdown : MonoBehaviour
         if (currentTimer <= 0)
         {
             Debug.Log("Time has ended");
+            endPanel.SetActive(true);
         }
     }
 }

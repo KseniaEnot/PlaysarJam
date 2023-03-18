@@ -40,6 +40,7 @@ public class PlayerMove : MonoBehaviour
 
         var input = inputController.GetInput();
         Vector3 move = new Vector3(input.x, 0, input.y);
+        bool diagonal = (input.x != 0) && (input.y != 0);
         if (move != Vector3.zero)
             transform.forward = move.normalized;
         move.y -= gravity;
@@ -48,8 +49,8 @@ public class PlayerMove : MonoBehaviour
          controller.Move(move * Speed * Time.deltaTime);
 
          transform.Rotate(Vector3.up, input.x * Rotation);*/
-        Debug.Log("врн Я рнани МЕ рюй?");
-        controller.Move(move * Speed * Time.deltaTime);
+        var curSpeed = diagonal? Mathf.Sqrt(Speed) : Speed;
+        controller.Move(move * curSpeed * Time.deltaTime);
 
     }
 

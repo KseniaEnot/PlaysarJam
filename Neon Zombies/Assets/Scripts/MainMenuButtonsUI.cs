@@ -6,14 +6,15 @@ using UnityEngine.EventSystems;
 
 public class MainMenuButtonsUI : MonoBehaviour, IEventSystemHandler
 {
-	public GameObject gameObject;
+	public GameObject gameObject1;
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		gameObject.SetActive(true);
+		gameObject1.SetActive(true);
+		Debug.Log("OK");
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-		gameObject.SetActive(false);
+		gameObject1.SetActive(false);
 	}
 }

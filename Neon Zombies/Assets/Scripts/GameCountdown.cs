@@ -10,7 +10,7 @@ public class GameCountdown : MonoBehaviour
     [SerializeField] Image fill;
     [SerializeField] TextMeshProUGUI text;
 
-    private float currentTimer = 0f;
+    public float currentTimer = 0f;
 
     private void Start()
     {

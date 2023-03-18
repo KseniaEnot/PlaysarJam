@@ -7,6 +7,7 @@ public class PlayerStateController : MonoBehaviour
 {
     [SerializeField]
     private float _stateColdown = 2f;
+    [SerializeField]
     private float _overloadColdown = 3f;
 
     private Emotions _playerState = Emotions.Happiness;
@@ -37,6 +38,7 @@ public class PlayerStateController : MonoBehaviour
 
     public event Action<Emotions> StateChanged;
     public event Action EmotionOverloaded;
+    public event Action EmotionOverloadEnded;
 
     private void Awake()
     {
@@ -118,7 +120,11 @@ public class PlayerStateController : MonoBehaviour
 
         _overloadTimer += Time.deltaTime;
 
-        if (_overloadTimer > _overloadColdown) { IsOverloaded = false; _overloadTimer = 0; }
+        if (_overloadTimer > _overloadColdown) { 
+            IsOverloaded = false; 
+            _overloadTimer = 0;
+            EmotionOverloadEnded.Invoke();
+        }
     }
 
     private void OnEmotionOverload()

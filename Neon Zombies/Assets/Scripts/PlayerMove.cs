@@ -43,6 +43,9 @@ public class PlayerMove : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         inputController = GetComponent<KeyboardInput>();
+
+        initialPlayerSpeed = Speed;
+        initialRotationSpeed = Rotation;
     }
 
     private void FixedUpdate()

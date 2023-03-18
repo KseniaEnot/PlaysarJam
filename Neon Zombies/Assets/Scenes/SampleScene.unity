@@ -1719,6 +1719,7 @@ GameObject:
   - component: {fileID: 1031189027}
   - component: {fileID: 1031189024}
   - component: {fileID: 1031189026}
+  - component: {fileID: 1031189028}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1863,6 +1864,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e887af6609a6424fbe4030004acd3a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1031189028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031189019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc1033bcd8f7e84290a9224a6deecf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stateColdown: 2
 --- !u!1 &1211587572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2586,11 @@ MonoBehaviour:
   barback: {fileID: 1024255613}
   x: 1.05
   y: 1.05
+  HappyUI: {fileID: 426622345}
+  FearUI: {fileID: 168800953}
+  SadUI: {fileID: 1211587574}
+  isSelected: 0
+  StateController: {fileID: 1031189028}
 --- !u!1 &1839106261
 GameObject:
   m_ObjectHideFlags: 0

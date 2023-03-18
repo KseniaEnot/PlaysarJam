@@ -14,6 +14,8 @@ public class PlayerMove : MonoBehaviour
     private CharacterController controller;
     private IInput inputController;
 
+    public bool isInTrap = false;
+
     public float Speed
     {
         get
@@ -49,6 +51,8 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isInTrap) return;
+
         var input = inputController.GetInput();
         Vector3 move = new Vector3(0, 0, input.y);
         move.y -= gravity;

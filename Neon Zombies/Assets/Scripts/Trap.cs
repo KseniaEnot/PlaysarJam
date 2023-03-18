@@ -20,8 +20,10 @@ public class Trap : MonoBehaviour
     private float _trapTimer = 0f;
 
     private bool _isInTrap = false;
+    private bool _isAlreadyTrapped = false;
 
-    PlayerStateController stateController;
+    PlayerStateController _stateController;
+    PlayerMove _playerMove;
 
     KeyboardInput input = KeyboardInput.getInstance();
 
@@ -34,15 +36,24 @@ public class Trap : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (!other.TryGetComponent(out stateController)) return;
-        if (stateController.PlayerState == Emotions.Sadness) return;
+        if (!other.TryGetComponent(out _stateController)) return;
+        if (!other.TryGetComponent(out _playerMove)) return;
+        if (_stateController.PlayerState == Emotions.Sadness) return;
+        if (_isAlreadyTrapped) return;
 
         GetCaught();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        _isAlreadyTrapped = false;
+    }
+
     private void GetCaught() {
-        stateController.IsStateChangeBlcoked = true;
+        _stateController.IsStateChangeBlcoked = true;
+        _playerMove.isInTrap = true;
         _isInTrap = true;
+        _isAlreadyTrapped = true;
     }
 
     private void IntTrapEvent()
@@ -63,8 +74,10 @@ public class Trap : MonoBehaviour
 
     private void GetOut()
     {
-        stateController.IsStateChangeBlcoked = false;
+        _stateController.IsStateChangeBlcoked = false;
         _isInTrap = false;
+        _playerMove.isInTrap = false;
         _trapTimer = 0f;
+        _trapProgress = 0f;
     }
 }

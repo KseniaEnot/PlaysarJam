@@ -100,7 +100,9 @@ MonoBehaviour:
   _timeInTrap: 10
   _progressSize: 10
   _progressOneTapPower: 1
-  _progressFallSpeed: 1
+  _progressFallSpeed: 3
+  _progressBar: {fileID: 0}
+  QTE: {fileID: 0}
 --- !u!135 &8803814590497931414
 SphereCollider:
   m_ObjectHideFlags: 0

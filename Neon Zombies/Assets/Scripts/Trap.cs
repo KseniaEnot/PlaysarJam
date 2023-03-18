@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Trap : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class Trap : MonoBehaviour
 
     [SerializeField]
     private float _progressFallSpeed = 1f;
+
+    [SerializeField]
+    private Image _progressBar;
+
+    [SerializeField]
+    private GameObject QTE;
 
     private float _trapProgress = 0f;
     private float _trapTimer = 0f;
@@ -54,6 +61,7 @@ public class Trap : MonoBehaviour
         _playerMove.isInTrap = true;
         _isInTrap = true;
         _isAlreadyTrapped = true;
+        ChangeActivity(true);
     }
 
     private void IntTrapEvent()
@@ -67,6 +75,8 @@ public class Trap : MonoBehaviour
         _trapProgress -= _progressFallSpeed * Time.deltaTime;
         if (_trapProgress < 0) _trapProgress = 0;
 
+        ChangeProgress(1 - _trapProgress / _progressSize);
+
 
         _trapTimer += Time.deltaTime;
         if (_trapTimer > _timeInTrap) GetOut();
@@ -79,5 +89,16 @@ public class Trap : MonoBehaviour
         _playerMove.isInTrap = false;
         _trapTimer = 0f;
         _trapProgress = 0f;
+        ChangeActivity(false);
+    }
+
+    private void ChangeProgress(float progress)
+    {
+        _progressBar.fillAmount = progress;
+    }
+
+    private void ChangeActivity(bool isActive)
+    {
+        QTE.SetActive(isActive);
     }
 }

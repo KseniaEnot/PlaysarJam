@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!4 &15576414 stripped
@@ -16808,6 +16812,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!4 &985698830 stripped
@@ -18234,6 +18242,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!4 &1132831826 stripped
@@ -19078,6 +19090,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!4 &1225978021 stripped
@@ -19241,6 +19257,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!4 &1228358338 stripped
@@ -25033,6 +25053,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!4 &1611219501 stripped
@@ -33942,6 +33966,10 @@ PrefabInstance:
       propertyPath: UIObj
       value: 
       objectReference: {fileID: 424132251}
+    - target: {fileID: 8264262839872139831, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2344b2a21b5d14399926e67fede732, type: 3}
 --- !u!1001 &8554752423513345524

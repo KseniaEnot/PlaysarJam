@@ -13,6 +13,9 @@ public class helperObjScript : MonoBehaviour
     GameObject fish;
     [SerializeField]
     GameObject fishSceleton;
+
+    [SerializeField]
+    SoundContorol sound;
     // Start is called before the first frame update
     private void OnTriggerStay(Collider other)
     {
@@ -20,6 +23,7 @@ public class helperObjScript : MonoBehaviour
         UIObj.GetComponent<GameCountdown>().currentTimer += bufSize;
         fish.SetActive(false);
         fishSceleton.SetActive(true);
+        sound.PlayEat();
         Destroy(this);
     }
 }

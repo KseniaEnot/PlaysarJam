@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bufSize: 10
   UIObj: {fileID: 0}
+  fish: {fileID: 1169843045473241563}
+  fishSceleton: {fileID: 2905517398170655165}
 --- !u!135 &3897800463741761813
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -191,6 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1638145b11b8ce64eb22b00b09bbfbed, type: 3}
+--- !u!1 &2905517398170655165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8080925267521758034, guid: 1638145b11b8ce64eb22b00b09bbfbed, type: 3}
+  m_PrefabInstance: {fileID: 6374649674056415983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7920314861040411137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3863475492422064366, guid: 1638145b11b8ce64eb22b00b09bbfbed, type: 3}
@@ -273,6 +280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41e9b3911b57a743b783a9fced7e150, type: 3}
+--- !u!1 &1169843045473241563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8080925267521758034, guid: d41e9b3911b57a743b783a9fced7e150, type: 3}
+  m_PrefabInstance: {fileID: 6924610681848736393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6162325925964198503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3863475492422064366, guid: d41e9b3911b57a743b783a9fced7e150, type: 3}

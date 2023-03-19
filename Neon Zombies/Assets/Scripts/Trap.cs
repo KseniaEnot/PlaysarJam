@@ -23,6 +23,10 @@ public class Trap : MonoBehaviour
 
     [SerializeField]
     private GameObject _text;
+
+    [SerializeField]
+    private LilTrap[] _lilTraps;
+
     private int textScroller = -1;
 
     [SerializeField]
@@ -39,13 +43,21 @@ public class Trap : MonoBehaviour
 
     KeyboardInput input = KeyboardInput.getInstance();
 
+    private void Start()
+    {
+        foreach(LilTrap lilTrap in _lilTraps)
+        {
+            lilTrap.onLilTrapStay += OnLilTrapTriggerStay;
+        }
+    }
+
 
     private void Update()
     {
         IntTrapEvent();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnLilTrapTriggerStay(Collider other)
     {
 
         if (!other.TryGetComponent(out _stateController)) return;

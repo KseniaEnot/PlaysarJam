@@ -136,6 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988658715454016973}
   - component: {fileID: 6824649936223517056}
+  - component: {fileID: -2761081649882241362}
   m_Layer: 0
   m_Name: trap
   m_TagString: Untagged
@@ -170,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 3928805386403717507}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f11a6b50ae7badd41bf8486418d08f15, type: 2}
+  m_Controller: {fileID: 9100000, guid: abe5b9adf9a27d54fabeb7590bf52420, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -180,6 +181,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2761081649882241362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928805386403717507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7256640302556040ba6c2e0a24c2a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3930309966905333433
 GameObject:
   m_ObjectHideFlags: 0

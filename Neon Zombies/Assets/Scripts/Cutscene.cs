@@ -9,6 +9,7 @@ public class Cutscene : MonoBehaviour
     [SerializeField] GameObject mask;
     [SerializeField] GameObject mainCamera;
     [SerializeField] GameObject cutsceneCamera;
+    [SerializeField] GameObject winPanel;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,7 +27,11 @@ public class Cutscene : MonoBehaviour
         cutsceneCamera.SetActive(true);
         mask.GetComponentInParent<PlayerStateController>().enabled = false;
         mask.GetComponentInParent<PlayerMove>().enabled = false;
+        mask.GetComponentInParent<Animator>().SetTrigger("isHappy");
+        mask.transform.parent.transform.rotation = new Quaternion(0, 0, 0, 0);
         StartCoroutine(fogDissipate());
+        StartCoroutine(WearHat());
+        StartCoroutine(RunIntoTheSun());
     }
 
     IEnumerator fogDissipate()
@@ -36,25 +41,34 @@ public class Cutscene : MonoBehaviour
         {
             time += Time.deltaTime;
             mask.gameObject.transform.localScale += Vector3.one * Time.deltaTime * 5f;
-            yield return null; 
+            yield return null;
         }
-        /*time = 0f;
-        while (time < 2f)
+    }
+
+    IEnumerator WearHat()
+    {
+        float time = 0f;
+        while (time < 3f)
         {
             time += Time.deltaTime;
             //get a hat
             yield return null;
-        }*/
-        time = 0f;
+        }
+
+    }
+
+    IEnumerator RunIntoTheSun()
+    {
+        float time = 0f;
         transform.forward = Vector3.zero;
-        while (time < 3f)
+        while (time < 5f)
         {
             time += Time.deltaTime;
             //walk away
-            mask.GetComponentInParent<PlayerMove>().controller.Move(new Vector3(0, 0, 1) * 2f * Time.deltaTime);
+            mask.GetComponentInParent<PlayerMove>().controller.Move(new Vector3(0, 0, 1) * 1f * Time.deltaTime);
             yield return null;
         }
-
         //open win panel
+        winPanel.SetActive(true);
     }
 }

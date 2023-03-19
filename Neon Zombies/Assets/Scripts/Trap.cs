@@ -76,6 +76,7 @@ public class Trap : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!_isAlreadyTrapped) return;
         _isAlreadyTrapped = false;
 
         foreach (Animator lilTrapAnimator in _lilTrapsAnimators)
@@ -94,13 +95,6 @@ public class Trap : MonoBehaviour
 
         soundControll.PlayTrapt();
 
-
-        StartCoroutine(DoCaught());
-    }
-
-    IEnumerator DoCaught()
-    {
-        yield return new WaitForSeconds(0.3f);
 
         _stateController.IsStateChangeBlcoked = true;
         _playerMove.isInTrap = true;

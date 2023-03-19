@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.59053785, g: 0.396132, b: 0.6245467, a: 1}
+  m_IndirectSpecularColor: {r: 0.5905447, g: 0.396132, b: 0.6245573, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1746,6 +1746,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &63951771 stripped
@@ -2622,6 +2626,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &153166232 stripped
@@ -3308,6 +3316,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &185701657 stripped
@@ -3479,6 +3491,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &191933752 stripped
@@ -3629,6 +3645,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &205450177 stripped
@@ -4381,6 +4401,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &281361910 stripped
@@ -5544,12 +5568,21 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &370114054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8803814590497931409, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
   m_PrefabInstance: {fileID: 370114053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &376790202 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+  m_PrefabInstance: {fileID: 1972314694}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &387868594
 GameObject:
@@ -6594,6 +6627,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &464347489 stripped
@@ -7774,6 +7811,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &558598401 stripped
@@ -7910,6 +7951,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &560475116 stripped
@@ -9520,6 +9565,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &632762608 stripped
@@ -12403,6 +12452,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &821938241 stripped
@@ -14078,6 +14131,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &923032101 stripped
@@ -14770,6 +14827,7 @@ Transform:
   - {fileID: 1653737889}
   - {fileID: 1646182825}
   - {fileID: 1424168826}
+  - {fileID: 376790202}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17119,6 +17177,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1127229413 stripped
@@ -17792,6 +17854,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1222893698 stripped
@@ -20439,6 +20505,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1369262633 stripped
@@ -20987,6 +21057,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1418268201 stripped
@@ -21061,6 +21135,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1421056842 stripped
@@ -21391,6 +21469,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1451135939 stripped
@@ -21465,6 +21547,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1456684311 stripped
@@ -22086,6 +22172,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1499491063 stripped
@@ -22664,6 +22754,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1544987984 stripped
@@ -22738,6 +22832,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1545736554 stripped
@@ -22936,6 +23034,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1583259032 stripped
@@ -23449,6 +23551,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1622432092 stripped
@@ -23755,6 +23861,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1626657058 stripped
@@ -25583,6 +25693,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1719876906 stripped
@@ -25851,6 +25965,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1734437104 stripped
@@ -26435,6 +26553,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1769371682 stripped
@@ -26509,6 +26631,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1776626509 stripped
@@ -27167,6 +27293,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &1809753287 stripped
@@ -28603,6 +28733,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
   m_PrefabInstance: {fileID: 1959543973}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1972314694
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 941443877}
+    m_Modifications:
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_RootOrder
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.967
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4486493
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863475492422064366, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080925267521758034, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
+      propertyPath: m_Name
+      value: candle (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04aeea24715422d47a398661cb2be7db, type: 3}
 --- !u!1 &1983756200
 GameObject:
   m_ObjectHideFlags: 0
@@ -30608,6 +30795,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 8554752423513345526}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 1913833016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!4 &2090348144 stripped

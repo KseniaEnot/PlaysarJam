@@ -34,10 +34,13 @@ public class MonologueManager : MonoBehaviour
         Debug.Log(mytxtData);
 
         var arrayString = mytxtData.text.Split('\n');
-        foreach (var line in arrayString)
-        {
-            sentences.Enqueue(line);
-        }
+        if (name != "notes")
+            foreach (var line in arrayString)
+            {
+                sentences.Enqueue(line);
+            }
+        else
+            sentences.Enqueue(arrayString[Random.Range(0, arrayString.Length - 1)]);
         isInDialogue = true;
 
         DiaplayNextSentence();

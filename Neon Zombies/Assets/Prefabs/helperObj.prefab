@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8264262839872139826}
   - component: {fileID: 8264262839872139831}
   - component: {fileID: 3897800463741761813}
+  - component: {fileID: 8591644300508984823}
   m_Layer: 0
   m_Name: helperObj
   m_TagString: Untagged
@@ -103,6 +104,7 @@ MonoBehaviour:
   UIObj: {fileID: 0}
   fish: {fileID: 1169843045473241563}
   fishSceleton: {fileID: 2905517398170655165}
+  sound: {fileID: 0}
 --- !u!135 &3897800463741761813
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -116,6 +118,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8591644300508984823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264262839872139824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6fc3a1f2c5a494e9c43cfc517fa861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: notes
+  isTriggeredByCollider: 1
+  InTrigger: 0
 --- !u!1001 &6374649674056415983
 PrefabInstance:
   m_ObjectHideFlags: 0

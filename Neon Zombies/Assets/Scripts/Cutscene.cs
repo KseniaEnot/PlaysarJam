@@ -7,9 +7,12 @@ public class Cutscene : MonoBehaviour
 {
     [SerializeField] List<GameObject> gameObjectsToHide;
     [SerializeField] GameObject mask;
+    [SerializeField] GameObject hat;
     [SerializeField] GameObject mainCamera;
     [SerializeField] GameObject cutsceneCamera;
     [SerializeField] GameObject winPanel;
+
+    float targetY = 1.818f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -48,10 +51,13 @@ public class Cutscene : MonoBehaviour
     IEnumerator WearHat()
     {
         float time = 0f;
-        while (time < 3f)
+        yield return new WaitForSeconds(0.9f);
+        hat.SetActive(true);
+        while (time < 4f)
         {
             time += Time.deltaTime;
             //get a hat
+            hat.transform.localPosition = new Vector3(0, hat.transform.localPosition.y - 1f * Time.deltaTime, 0);
             yield return null;
         }
 

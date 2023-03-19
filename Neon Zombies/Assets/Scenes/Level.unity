@@ -16310,7 +16310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5217583843999783209, guid: 205bd4f6682d3f247b7c98fd803f344b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5217583844078791010, guid: 205bd4f6682d3f247b7c98fd803f344b, type: 3}
       propertyPath: m_fontSize
@@ -22089,7 +22089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1358375494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33095,6 +33095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3469858734767810898, guid: 65f0b07ca848bfd4db94d2f6a892a736, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3469858735923062481, guid: 65f0b07ca848bfd4db94d2f6a892a736, type: 3}
       propertyPath: m_Name
       value: Cutscene

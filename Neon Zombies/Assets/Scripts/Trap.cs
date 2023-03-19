@@ -27,6 +27,12 @@ public class Trap : MonoBehaviour
     [SerializeField]
     private LilTrap[] _lilTraps;
 
+    [SerializeField]
+    private Animator[] _lilTrapsAnimators;
+
+    [SerializeField]
+    private SoundContorol soundControll;
+
     private int textScroller = -1;
 
     [SerializeField]
@@ -71,9 +77,31 @@ public class Trap : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _isAlreadyTrapped = false;
+
+        foreach (Animator lilTrapAnimator in _lilTrapsAnimators)
+        {
+            lilTrapAnimator.SetBool("isOpen", true);
+        }
+        soundControll.PlayTraptOpen();
     }
 
     private void GetCaught() {
+
+        foreach (Animator lilTrapAnimator in _lilTrapsAnimators)
+        {
+            lilTrapAnimator.SetBool("isOpen", false);
+        }
+
+        soundControll.PlayTrapt();
+
+
+        StartCoroutine(DoCaught());
+    }
+
+    IEnumerator DoCaught()
+    {
+        yield return new WaitForSeconds(0.3f);
+
         _stateController.IsStateChangeBlcoked = true;
         _playerMove.isInTrap = true;
         _isInTrap = true;
@@ -111,6 +139,7 @@ public class Trap : MonoBehaviour
         _playerMove.isInTrap = false;
         _trapTimer = 0f;
         _trapProgress = 0f;
+
         ChangeActivity(false);
     }
 

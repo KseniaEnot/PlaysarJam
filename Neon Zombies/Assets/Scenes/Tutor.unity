@@ -1090,6 +1090,10 @@ PrefabInstance:
       propertyPath: _progressBar
       value: 
       objectReference: {fileID: 1356022589}
+    - target: {fileID: 8803814590497931421, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
+      propertyPath: soundControll
+      value: 
+      objectReference: {fileID: 371441508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746699c1c357f8c47a9078bd4011c1a9, type: 3}
 --- !u!1001 &925988676

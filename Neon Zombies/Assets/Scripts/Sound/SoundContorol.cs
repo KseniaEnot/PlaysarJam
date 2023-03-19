@@ -17,6 +17,8 @@ public class SoundContorol : MonoBehaviour
     [SerializeField] AudioSource run;
     [SerializeField] AudioSource walk;
     [SerializeField] AudioSource eat;
+    [SerializeField] AudioSource trap;
+    [SerializeField] AudioSource trapOpen;
 
     [SerializeField]
     private PlayerStateController _stateController;
@@ -90,6 +92,17 @@ public class SoundContorol : MonoBehaviour
     {
         eat.Play();
     }
+
+    public void PlayTrapt()
+    {
+        trap.Play();
+    }
+
+    public void PlayTraptOpen()
+    {
+        trapOpen.Play();
+    }
+
 
     public void PlayRun()
     {

@@ -37,7 +37,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isInTrap || isInDialog) return;
+        if (isInTrap) return;
 
         var input = inputController.GetInput();
         Vector3 move = new Vector3(input.x, 0, input.y);

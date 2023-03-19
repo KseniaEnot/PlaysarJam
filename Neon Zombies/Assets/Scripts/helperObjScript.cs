@@ -8,11 +8,18 @@ public class helperObjScript : MonoBehaviour
     float bufSize;
     [SerializeField]
     GameObject UIObj;
+
+    [SerializeField]
+    GameObject fish;
+    [SerializeField]
+    GameObject fishSceleton;
     // Start is called before the first frame update
     private void OnTriggerStay(Collider other)
     {
         //dialog place;
         UIObj.GetComponent<GameCountdown>().currentTimer += bufSize;
-        this.gameObject.SetActive(false);
+        fish.SetActive(false);
+        fishSceleton.SetActive(true);
+        Destroy(this);
     }
 }

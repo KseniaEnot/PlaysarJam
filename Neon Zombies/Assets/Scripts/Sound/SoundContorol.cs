@@ -16,6 +16,7 @@ public class SoundContorol : MonoBehaviour
     [SerializeField] AudioSource sad;
     [SerializeField] AudioSource run;
     [SerializeField] AudioSource walk;
+    [SerializeField] AudioSource eat;
 
     [SerializeField]
     private PlayerStateController _stateController;
@@ -83,6 +84,11 @@ public class SoundContorol : MonoBehaviour
     public void PlayHehe()
     {
         hehe.Play();
+    }
+
+    public void PlayEat()
+    {
+        eat.Play();
     }
 
     public void PlayRun()

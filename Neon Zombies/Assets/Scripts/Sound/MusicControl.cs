@@ -14,7 +14,7 @@ public class MusicControl : MonoBehaviour
     [SerializeField]
     private PlayerStateController _stateController;
 
-    [SerializeField] float transitionTime = 1f;
+    [SerializeField] float transitionTime = 3f;
     Vector3 initialScale;
 
     IEnumerator ChangeMusic(AudioSource start, AudioSource stop)
@@ -30,7 +30,7 @@ public class MusicControl : MonoBehaviour
             Debug.Log(a);
             start.volume = Mathf.Clamp(a,0f,1f);
             stop.volume = Mathf.Clamp(1 - a, 0f, 1f);
-            yield return new WaitForSeconds(step*3);
+            yield return new WaitForSeconds(step);
         }
         stop.Stop();
     }

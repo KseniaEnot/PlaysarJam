@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     private IInput inputController;
 
     public bool isInTrap = false;
+    public bool isInDialog = false;
 
     public float Speed
     {
@@ -36,7 +37,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isInTrap) return;
+        if (isInTrap || isInDialog) return;
 
         var input = inputController.GetInput();
         Vector3 move = new Vector3(input.x, 0, input.y);

@@ -11,7 +11,7 @@ public class StopTime : MonoBehaviour
     
     public void Update()
     {
-        move.isInTrap = MonologueManager.isInDialogue;
+        move.isInDialog = MonologueManager.isInDialogue;
         //Time.timeScale = timer;
         //Debug.Log(Time.timeScale);
         //if (MonologueManager.isInDialogue == true)

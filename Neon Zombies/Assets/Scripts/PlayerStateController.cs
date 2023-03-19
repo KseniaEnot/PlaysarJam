@@ -17,6 +17,9 @@ public class PlayerStateController : MonoBehaviour
     [SerializeField]
     private float _overloadColdown = 3f;
 
+    [SerializeField]
+    private bool _canOverload = true;
+
     private Emotions _playerState = Emotions.Happiness;
     private float _stateColdownTimer = 0f;
     private float _overloadTimer = 0f;
@@ -193,7 +196,7 @@ public class PlayerStateController : MonoBehaviour
 
     private void UpdateOverloadTimer()
     {
-        if (!IsOverloaded) return;
+        if (!IsOverloaded || !_canOverload) return;
 
         _overloadTimer += Time.deltaTime;
 

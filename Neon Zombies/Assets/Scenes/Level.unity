@@ -22140,7 +22140,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 170067548}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -26028,6 +26028,11 @@ PrefabInstance:
 --- !u!1 &1632670557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8233910797424610968, guid: 9c10d8766daecd441843bbf041d527b8, type: 3}
+  m_PrefabInstance: {fileID: 1632670556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1632670558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6577036533881870779, guid: 9c10d8766daecd441843bbf041d527b8, type: 3}
   m_PrefabInstance: {fileID: 1632670556}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1632888153
@@ -30445,7 +30450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.88113207, b: 0.88113207, a: 1}
+  m_Color: {r: 0.7764706, g: 0.70854163, b: 0.45490196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -32709,7 +32714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &2055565866
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33147,6 +33152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3469858735923062483, guid: 65f0b07ca848bfd4db94d2f6a892a736, type: 3}
+      propertyPath: hat
+      value: 
+      objectReference: {fileID: 1632670558}
     - target: {fileID: 3469858735923062483, guid: 65f0b07ca848bfd4db94d2f6a892a736, type: 3}
       propertyPath: mask
       value: 

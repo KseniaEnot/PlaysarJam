@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 8803814590497931420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 1.11}
-  m_LocalScale: {x: 1.6, y: 0.1, z: 1.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.08, y: 0.13, z: 2.08}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 161435856974852630}
   - {fileID: 6242545598407552954}
@@ -181,7 +181,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!95 &5851271193595381339 stripped
 Animator:
@@ -297,7 +297,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!95 &4705313301320480858 stripped
 Animator:
@@ -408,7 +408,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!4 &4118906707120060760 stripped
 Transform:
@@ -545,7 +545,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &6564438428991726199
 PrefabInstance:
@@ -661,5 +661,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.45
   m_Center: {x: 0, y: 0.2, z: 0}

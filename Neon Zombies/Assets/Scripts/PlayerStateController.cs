@@ -7,7 +7,11 @@ using UnityEngine.UI;
 public class PlayerStateController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] EmotionImage = new GameObject[3];
+    private GameObject _happyEmoji;
+    [SerializeField]
+    private GameObject _sadEmoji;
+    [SerializeField]
+    private GameObject _angerEmoji;
     [SerializeField]
     private float _stateColdown = 2f;
     [SerializeField]
@@ -89,10 +93,10 @@ public class PlayerStateController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1) && PlayerState != Emotions.Happiness) { 
             PlayerState = Emotions.Happiness;
-            EmotionImage[0].SetActive(false);
-            EmotionImage[1].SetActive(true);
-            EmotionImage[2].SetActive(false);
-            image = EmotionImage[1].GetComponent<Image>();
+            _happyEmoji.SetActive(true);
+            _sadEmoji.SetActive(false);
+            _angerEmoji.SetActive(false);
+            image = _happyEmoji.GetComponent<Image>();
             tempColor = image.color;
             tempColor.a = 1f;
             image.color = tempColor;
@@ -103,13 +107,13 @@ public class PlayerStateController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2) && PlayerState != Emotions.Fear)
         {
             PlayerState = Emotions.Fear;
-            EmotionImage[0].SetActive(true);
-            image = EmotionImage[0].GetComponent<Image>();
+            _happyEmoji.SetActive(false);
+            _angerEmoji.SetActive(true);
+            _sadEmoji.SetActive(false);
+            image = _angerEmoji.GetComponent<Image>();
             tempColor = image.color;
             tempColor.a = 1f;
             image.color = tempColor;
-            EmotionImage[1].SetActive(false);
-            EmotionImage[2].SetActive(false);
             _canChangeState = false;
             _stateColdownTimer = 0f;
         }
@@ -117,10 +121,10 @@ public class PlayerStateController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3) && PlayerState != Emotions.Sadness)
         {
             PlayerState = Emotions.Sadness;
-            EmotionImage[0].SetActive(false);
-            EmotionImage[1].SetActive(false);
-            EmotionImage[2].SetActive(true);
-            image = EmotionImage[2].GetComponent<Image>();
+            _happyEmoji.SetActive(false);
+            _angerEmoji.SetActive(false);
+            _sadEmoji.SetActive(true);
+            image = _sadEmoji.GetComponent<Image>();
             tempColor = image.color;
             tempColor.a = 1f;
             image.color = tempColor;
@@ -143,37 +147,39 @@ public class PlayerStateController : MonoBehaviour
             switch (PlayerState)
             {
                 case Emotions.Fear:
-                    EmotionImage[1].SetActive(true);
-                    EmotionImage[2].SetActive(true);
-                    image = EmotionImage[1].GetComponent<Image>();
+                    _sadEmoji.SetActive(true);
+                    _happyEmoji.SetActive(true);
+                    image = _sadEmoji.GetComponent<Image>();
                     tempColor = image.color;
                     tempColor.a = 0.5f;
                     image.color = tempColor;
-                    image = EmotionImage[2].GetComponent<Image>();
+                    image = _happyEmoji.GetComponent<Image>();
                     tempColor = image.color;
                     tempColor.a = 0.5f;
                     image.color = tempColor;
                     break;
+
                 case Emotions.Happiness:
-                    EmotionImage[0].SetActive(true);
-                    EmotionImage[2].SetActive(true);
-                    image = EmotionImage[0].GetComponent<Image>();
+                    _sadEmoji.SetActive(true);
+                    _angerEmoji.SetActive(true);
+                    image = _sadEmoji.GetComponent<Image>();
                     tempColor = image.color;
                     tempColor.a = 0.5f;
                     image.color = tempColor;
-                    image = EmotionImage[2].GetComponent<Image>();
+                    image = _angerEmoji.GetComponent<Image>();
                     tempColor = image.color;
                     tempColor.a = 0.5f;
                     image.color = tempColor;
                     break;
+
                 case Emotions.Sadness:
-                    EmotionImage[0].SetActive(true);
-                    EmotionImage[1].SetActive(true);
-                    image = EmotionImage[1].GetComponent<Image>();
+                    _angerEmoji.SetActive(true);
+                    _happyEmoji.SetActive(true);
+                    image = _happyEmoji.GetComponent<Image>();
                     tempColor = image.color;
                     tempColor.a = 0.5f;
                     image.color = tempColor;
-                    image = EmotionImage[0].GetComponent<Image>();
+                    image = _angerEmoji.GetComponent<Image>();
                     tempColor = image.color;
                     tempColor.a = 0.5f;
                     image.color = tempColor;

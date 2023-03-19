@@ -13,6 +13,9 @@ public class AnimatorController : MonoBehaviour
     [SerializeField]
     private CharacterController controller;
 
+    [SerializeField]
+    private SoundContorol _soundController;
+
     private PlayerMove playerMove;
 
     void Start()
@@ -23,7 +26,12 @@ public class AnimatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerAnimator.SetBool("isMoving", controller.velocity.magnitude > 0f);
+        bool isMoving = controller.velocity.magnitude > 0f;
+        playerAnimator.SetBool("isMoving", isMoving);
+        if (isMoving) _soundController.PlayRun();
+        else _soundController.StopRun();
+
+
     }
 
     private void OnEmotionChange(Emotions emotion)

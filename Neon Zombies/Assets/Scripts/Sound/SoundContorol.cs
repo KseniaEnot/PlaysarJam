@@ -10,6 +10,16 @@ public class SoundContorol : MonoBehaviour
     [SerializeField] Slider _soudSlider;
     [SerializeField] AudioMixer _audioMixer;
 
+    [SerializeField] AudioSource hehe;
+    [SerializeField] AudioSource anger;
+    [SerializeField] AudioSource happy;
+    [SerializeField] AudioSource sad;
+    [SerializeField] AudioSource run;
+    [SerializeField] AudioSource walk;
+
+    [SerializeField]
+    private PlayerStateController _stateController;
+
     private void Start()
     {
         if(_musicSlider!=null && _soudSlider != null)
@@ -23,6 +33,26 @@ public class SoundContorol : MonoBehaviour
             if (_audioMixer.GetFloat("musicVol", out sound))
                 _musicSlider.value = sound;
         }
+
+        if (_stateController != null) _stateController.EmotionOverloaded += onStateChange;
+    }
+
+    private void onStateChange()
+    {
+        switch (_stateController.PlayerState)
+        {
+            case Emotions.Fear:
+                PlayAngry();
+                break;
+
+            case Emotions.Happiness:
+                PlayHappy();
+                break;
+
+            case Emotions.Sadness:
+                PlaySad();
+                break;
+        }
     }
 
     public void ChangeMusic()
@@ -33,5 +63,46 @@ public class SoundContorol : MonoBehaviour
     public void ChangeSound()
     {
         _audioMixer.SetFloat("soundVol", _soudSlider.value);
+    }
+
+    public void PlayHappy()
+    {
+        happy.Play();
+    }
+
+    public void PlaySad()
+    {
+        sad.Play();
+    }
+
+    public void PlayAngry()
+    {
+        anger.Play();
+    }
+
+    public void PlayHehe()
+    {
+        hehe.Play();
+    }
+
+    public void PlayRun()
+    {
+        if(_stateController.PlayerState == Emotions.Fear)
+        {
+            if (!run.isPlaying) run.Play();
+            if (walk.isPlaying) walk.Stop();
+        }
+        else
+        {
+            if (run.isPlaying) run.Stop();
+            if (!walk.isPlaying) walk.Play();
+        }
+
+    }
+
+    public void StopRun()
+    {
+        run.Stop();
+        walk.Stop();
     }
 }

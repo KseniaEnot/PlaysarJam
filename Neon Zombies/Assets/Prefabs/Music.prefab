@@ -47,6 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5407bacba8f7614488ba5be8352f8262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _happyMusic: {fileID: 5572270205203738814}
+  _sadMusic: {fileID: 3976050947253319209}
+  _angryMusic: {fileID: 3738431162417413514}
+  _stateController: {fileID: 0}
 --- !u!1 &4614252038608121079
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +97,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -221,7 +225,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

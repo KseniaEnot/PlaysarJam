@@ -42,9 +42,9 @@ public class UIController : MonoBehaviour
     }
     public void PauseSettings()
     {
-        pausesettings = true;
-        PauseUI.SetActive(false);
-        PauseSettingsUI.SetActive(true);
+        pausesettings = !pausesettings;
+        PauseUI.SetActive(!pausesettings);
+        PauseSettingsUI.SetActive(pausesettings);
     }
     public void ToMainMenu()
     {

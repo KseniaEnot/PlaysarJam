@@ -531,7 +531,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 9.8
   playerSpeed: 1.5
+  controller: {fileID: 0}
   isInTrap: 0
+  isInDialog: 0
 --- !u!114 &8326046224436210954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,8 +559,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc1033bcd8f7e84290a9224a6deecf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _happyEmoji: {fileID: 0}
+  _sadEmoji: {fileID: 0}
+  _angerEmoji: {fileID: 0}
   _stateColdown: 2
   _overloadColdown: 3
+  _canOverload: 1
   IsStateChangeBlcoked: 0
   IsOverloaded: 0
   increase: 0.1
@@ -593,6 +599,8 @@ MonoBehaviour:
   playerAnimator: {fileID: -3633983331887158548}
   stateController: {fileID: 3660602491946415051}
   controller: {fileID: 4741083957884868338}
+  _soundController: {fileID: 0}
+  playerMove: {fileID: 4649184503313504644}
 --- !u!1 &1511249258354967006
 GameObject:
   m_ObjectHideFlags: 0

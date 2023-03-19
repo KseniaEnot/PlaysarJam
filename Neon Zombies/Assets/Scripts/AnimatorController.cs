@@ -16,6 +16,7 @@ public class AnimatorController : MonoBehaviour
     [SerializeField]
     private SoundContorol _soundController;
 
+    [SerializeField]
     private PlayerMove playerMove;
 
     void Start()
@@ -27,7 +28,7 @@ public class AnimatorController : MonoBehaviour
     void Update()
     {
         bool isMoving = controller.velocity.magnitude > 0f;
-        playerAnimator.SetBool("isMoving", isMoving);
+        playerAnimator.SetBool("isMoving", !playerMove.isInTrap && isMoving);
         if (isMoving) _soundController.PlayRun();
         else _soundController.StopRun();
 

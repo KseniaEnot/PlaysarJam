@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float playerSpeed = 1f;
 
     private float initialPlayerSpeed;
-    private CharacterController controller;
+    public CharacterController controller;
     private IInput inputController;
 
     public bool isInTrap = false;

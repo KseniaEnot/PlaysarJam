@@ -10,8 +10,8 @@ public class MonologueManager : MonoBehaviour
     [SerializeField] GameObject panel;
     [SerializeField] float typingSpeed;
     private Queue<string> sentences;
-
-    bool isInDialogue = false;
+   
+    static public  bool isInDialogue = false;
 
     private void Update()
     {
@@ -71,8 +71,9 @@ public class MonologueManager : MonoBehaviour
         //DiaplayNextSentence();
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
+
         StopAllCoroutines();
         sentences.Clear();
         isInDialogue = false;

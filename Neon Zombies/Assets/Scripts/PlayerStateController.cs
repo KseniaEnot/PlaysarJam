@@ -17,8 +17,7 @@ public class PlayerStateController : MonoBehaviour
     [SerializeField]
     private float _overloadColdown = 3f;
 
-    [SerializeField]
-    private bool _canOverload = true;
+    public bool _canOverload = true;
 
     private Emotions _playerState = Emotions.Happiness;
     private float _stateColdownTimer = 0f;
@@ -70,6 +69,7 @@ public class PlayerStateController : MonoBehaviour
 
     private void UpdateScale()
     {
+        if (!_canOverload) return;
         foreach (Emotions emotionType in Enum.GetValues(typeof(Emotions)))
         {
             if (emotionType == PlayerState)
@@ -140,6 +140,7 @@ public class PlayerStateController : MonoBehaviour
 
     void UpdateTimer()
     {
+        if (!_canOverload) return;
         Image image;
         Color tempColor;
         if (_canChangeState) return;

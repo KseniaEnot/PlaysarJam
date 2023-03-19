@@ -11,6 +11,7 @@ public class GameCountdown : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject endPanel;
     [SerializeField] MusicControl music;
+    [SerializeField] PlayerStateController stateController;
 
     [HideInInspector] public float currentTimer = 0f;
 
@@ -31,6 +32,8 @@ public class GameCountdown : MonoBehaviour
             Debug.Log("Time has ended");
             endPanel.SetActive(true);
             music.PlayLose();
+            stateController._canOverload = false;
+            Destroy(this);
         }
     }
 }

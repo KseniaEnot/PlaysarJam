@@ -46,6 +46,7 @@ public class MusicControl : MonoBehaviour
 
     private void onStateChange(Emotions state)
     {
+        StopAllCoroutines();
         switch (state)
         {
             case Emotions.Fear:
@@ -76,6 +77,7 @@ public class MusicControl : MonoBehaviour
         _happyMusic.Stop();
         _sadMusic.Stop();
         _angryMusic.Stop();
+        if(!_loseMusic.isPlaying)
         _loseMusic.Play();
     }
 

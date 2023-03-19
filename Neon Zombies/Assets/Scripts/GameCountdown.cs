@@ -10,6 +10,7 @@ public class GameCountdown : MonoBehaviour
     [SerializeField] Image fill;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] GameObject endPanel;
+    [SerializeField] MusicControl music;
 
     [HideInInspector] public float currentTimer = 0f;
 
@@ -29,6 +30,7 @@ public class GameCountdown : MonoBehaviour
         {
             Debug.Log("Time has ended");
             endPanel.SetActive(true);
+            music.PlayLose();
         }
     }
 }

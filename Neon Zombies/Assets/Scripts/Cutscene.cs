@@ -10,10 +10,12 @@ public class Cutscene : MonoBehaviour
     [SerializeField] GameObject mainCamera;
     [SerializeField] GameObject cutsceneCamera;
     [SerializeField] GameObject winPanel;
+    [SerializeField] MusicControl music;
 
     private void OnTriggerEnter(Collider other)
     {
         FindObjectOfType<GameCountdown>().currentTimer = 6000f;
+        music.PlayWin();
 
         foreach (GameObject gameObject in gameObjectsToHide)
             gameObject.SetActive(false);

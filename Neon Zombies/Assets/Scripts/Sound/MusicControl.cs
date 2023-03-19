@@ -10,6 +10,10 @@ public class MusicControl : MonoBehaviour
     private AudioSource _sadMusic;
     [SerializeField]
     private AudioSource _angryMusic;
+    [SerializeField]
+    private AudioSource _winMusic;
+    [SerializeField]
+    private AudioSource _loseMusic;
 
     [SerializeField]
     private PlayerStateController _stateController;
@@ -57,6 +61,22 @@ public class MusicControl : MonoBehaviour
                 if (_happyMusic.isPlaying) StartCoroutine(ChangeMusic(_sadMusic, _happyMusic));
                 break;
         }
+    }
+
+    public void PlayWin()
+    {
+        _happyMusic.Stop();
+        _sadMusic.Stop();
+        _angryMusic.Stop();
+        _winMusic.Play();
+    }
+
+    public void PlayLose()
+    {
+        _happyMusic.Stop();
+        _sadMusic.Stop();
+        _angryMusic.Stop();
+        _loseMusic.Play();
     }
 
 }

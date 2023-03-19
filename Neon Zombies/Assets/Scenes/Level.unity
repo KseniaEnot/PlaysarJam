@@ -4730,6 +4730,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3863475492422064366, guid: 1638145b11b8ce64eb22b00b09bbfbed, type: 3}
   m_PrefabInstance: {fileID: 290641250}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &298029390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1089639539228142031, guid: d41f168fc320f79478f7605efd1f30f8, type: 3}
+  m_PrefabInstance: {fileID: 1610217616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5407bacba8f7614488ba5be8352f8262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &299217223
 GameObject:
   m_ObjectHideFlags: 0
@@ -6178,6 +6189,7 @@ MonoBehaviour:
   fill: {fileID: 527912800}
   text: {fileID: 1350130643}
   endPanel: {fileID: 751615021}
+  music: {fileID: 298029390}
   currentTimer: 0
 --- !u!114 &424132258
 MonoBehaviour:
@@ -30270,6 +30282,10 @@ PrefabInstance:
       propertyPath: mask
       value: 
       objectReference: {fileID: 1632670557}
+    - target: {fileID: 3469858735923062483, guid: 65f0b07ca848bfd4db94d2f6a892a736, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 298029390}
     - target: {fileID: 3469858735923062483, guid: 65f0b07ca848bfd4db94d2f6a892a736, type: 3}
       propertyPath: winPanel
       value: 
